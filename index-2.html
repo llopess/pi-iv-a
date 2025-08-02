@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asilo de Mendigos de Pelotas</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: "#007bff",
+              secondary: "#28a745",
+              darkbg: "#333",
+              lightbg: "#f8f8f8",
+              graybg: "#f0f0f0",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="snap-y snap-mandatory overflow-y-scroll">
+    <header
+      class="sticky top-0 h-20 px-8 w-full flex justify-between items-center z-50 backdrop-blur-md bg-white/80 border-b border-gray-200"
+    >
+      <img src="assets/logo-bg.png" class="h-12" />
+      <nav class="flex gap-6">
+        <a href="#historia">Quem Somos</a>
+        <a href="#colabore">Como Ajudar</a>
+        <a href="#localizacao">Onde Estamos</a>
+        <a href="#contato">Fale Conosco</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="min-h-[calc(100vh-5rem)] grid grid-cols-12">
+        <div class="col-span-4 flex items-center pl-8">
+          <div>
+            <h2 class="text-2xl font-bold mb-2">
+              Asilo de Mendigos de Pelotas
+            </h2>
+            <p>
+              A mais antiga instituição de acolhimento para pessoas
+              desassistidas do Rio Grande do Sul.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-span-8 relative">
+          <img
+            src="assets/asilo-draw.png"
+            alt="Imagem"
+            class="w-full h-full object-cover object-left"
+          />
+          <div
+            class="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-white to-transparent pointer-events-none"
+          ></div>
+        </div>
+      </section>
+
+      <section
+        id="historia"
+        class="h-screen bg-yellow-50 text-black py-20 px-8 content-center"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-6">Nossa História</h2>
+          <p class="text-lg leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            vitae orci nec quam sagittis gravida. Proin id leo sed justo
+            malesuada dapibus. Integer ultrices tincidunt ipsum, eget tincidunt
+            sapien pellentesque ac. Vestibulum viverra leo sed justo feugiat, in
+            tempus purus feugiat. Pellentesque habitant morbi tristique senectus
+            et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="colabore"
+        class="h-screen bg-white text-black py-20 px-8 content-center"
+      >
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+        >
+          <!-- QR Code -->
+          <div class="flex justify-center">
+            <img
+              src="assets/qr-code.png"
+              alt="QR Code para doação via Pix"
+              class="w-64 h-64"
+            />
+          </div>
+
+          <!-- Texto explicativo -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4">
+              Colabore diretamente conosco
+            </h2>
+            <p class="mb-4 text-lg leading-relaxed">
+              Sua doação nos ajuda a continuar promovendo assistência e
+              acolhimento para quem mais precisa. A transparência e confiança
+              são essenciais nesse processo.
+            </p>
+            <div class="bg-gray-100 rounded p-4">
+              <p><strong>Chave Pix:</strong> doacoes@asilopelotas.org.br</p>
+              <p><strong>Banco:</strong> 001 - Banco do Brasil</p>
+              <p><strong>Agência:</strong> 1234-5</p>
+              <p><strong>Conta:</strong> 67890-1</p>
+              <p><strong>Nome:</strong> Asilo de Mendigos de Pelotas</p>
+              <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="localizacao" class="h-screen bg-gray-50 text-black px-8">
+        <div
+          class="max-w-6xl mx-auto h-full grid grid-cols-1 md:grid-cols-12 gap-12"
+        >
+          <!-- Mapa -->
+          <div class="col-span-8 relative h-full">
+            <div
+              class="absolute inset-0 z-10 cursor-pointer"
+              onclick="this.style.pointerEvents='none'"
+              title="Clique para ativar o mapa"
+            ></div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.8410613991194!2d-52.33813659006395!3d-31.759560680357858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5968ed787ad%3A0xc40e1041ca5839cb!2sAsilo%20de%20Mendigos%20de%20Pelotas!5e0!3m2!1spt-BR!2sbr!4v1754170095325!5m2!1spt-BR!2sbr"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+            ></iframe>
+          </div>
+
+          <!-- Endereço e horários -->
+          <div class="col-span-4 flex flex-col justify-center h-full">
+            <div>
+              <h2 class="text-2xl font-bold mb-4">Onde Estamos</h2>
+              <p class="mb-2">
+                Parque Dom Antônio Zattera, 338<br />
+                Pelotas – RS<br />
+                CEP 96015-180
+              </p>
+
+              <h3 class="text-xl font-semibold mt-6 mb-2">
+                Horário de Funcionamento
+              </h3>
+              <ul class="text-sm leading-relaxed">
+                <li>
+                  <strong>Segunda a sexta:</strong> 08:00–11:30 / 14:00–17:30
+                </li>
+                <li><strong>Sábado:</strong> 08:00–12:00</li>
+                <li><strong>Domingo:</strong> Fechado</li>
+              </ul>
+
+              <p class="text-lg leading-relaxed mt-6">
+                Estamos de portas abertas para receber sua visita. Conheça nosso
+                espaço e veja de perto o impacto da sua colaboração.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="h-screen bg-yellow-50 text-black px-8 py-20">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold mb-8 text-center">Fale Conosco</h2>
+
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Nome -->
+            <div class="md:col-span-1">
+              <label for="nome" class="block text-sm font-medium mb-1"
+                >Nome</label
+              >
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+
+            <!-- E-mail -->
+            <div class="md:col-span-1">
+              <label for="email" class="block text-sm font-medium mb-1"
+                >E-mail para contato</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+
+            <!-- Telefone -->
+            <div class="md:col-span-2">
+              <label for="telefone" class="block text-sm font-medium mb-1"
+                >Telefone (opcional)</label
+              >
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+
+            <!-- Mensagem -->
+            <div class="md:col-span-2">
+              <label for="mensagem" class="block text-sm font-medium mb-1"
+                >Mensagem</label
+              >
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="6"
+                required
+                class="w-full border border-gray-300 rounded px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+              ></textarea>
+            </div>
+
+            <!-- Botão -->
+            <div class="md:col-span-2 text-center mt-4">
+              <button
+                type="submit"
+                class="bg-primary text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
+              >
+                Enviar Mensagem
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-100 text-black px-8 py-12">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start"
+      >
+        <!-- Navegação -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Navegação</h3>
+          <ul class="space-y-2">
+            <li><a href="#historia" class="hover:underline">Quem Somos</a></li>
+            <li><a href="#colabore" class="hover:underline">Como Ajudar</a></li>
+            <li>
+              <a href="#localizacao" class="hover:underline">Onde Estamos</a>
+            </li>
+            <li><a href="#contato" class="hover:underline">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes sociais -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Redes Sociais</h3>
+          <ul class="flex gap-4">
+            <li>
+              <a href="#" aria-label="Facebook" class="hover:underline"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram" class="hover:underline"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-label="WhatsApp" class="hover:underline"
+                >WhatsApp</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Copyright -->
+        <div class="md:text-right">
+          <p class="text-sm">
+            &copy; 2025 Asilo de Mendigos de Pelotas. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
